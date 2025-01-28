@@ -1,35 +1,119 @@
-## Bash Practice 
+## Bash Practice for DS219
 
-1. Create a new directory called `ds219` under the /tmp directory.
+This exercise includes basic file and directory management, viewing and manipulating file content, using a text editor, and understanding process management in the Bash shell.
 
-2. Look up the touch program. The man program is your friend.
+### Part 1: Working with Directories and Files
 
-3. Use touch to create a new file called `myscript` in `/tmp/ds219`.
+1. **Create a New Directory**:  
+   Create a new directory called `ds219`.
+   ```bash
+   mkdir ~/Desktop/ds219
+   ```
 
-4. Write the following into that file, one line at a time:
+2. **Change Directory and Verify Location**:  
+   Navigate to the `ds219` directory and print the current directory path.
+   ```bash
+   cd ~/Desktop/ds219/
+   ```
+   ```bash
+   pwd
+   ```
 
-```bash
-#!/bin/sh
-curl --head --silent  https://github.com/DS219/resources/blob/main/LICENSE
-```
+3. **List Directory Contents**:  
+   Display the contents of the current directory.
+   ```bash
+   ls -l
+   ```
 
-5. Try to execute the file, i.e. type the path to the script (/tmp/ds219/myscript) into your shell and press enter. Understand why it doesn’t work by consulting the output of ls (hint: look at the permission bits of the file).
+### Part 2: File Creation and Editing with `vi`
 
-6. Look up the chmod program (use `man chmod`).
+4. **Create and Edit Files using `vi`**:  
+   Use `vi` to create and edit `file1.txt` and `file2.md`.
+   - Open `file1.txt` in `vi`, type some text, save, and exit:
+     ```bash
+     vi file1.txt
+     ```
+     (In `vi`, type `i` to enter insert mode, type your text, press `Esc` to exit insert mode, type `:wq` to save and quit.)
+   - Repeat the process for `file2.md`.
 
-7. Use chmod to make it possible to run the command `/tmp/ds219/myscript` How does your shell know that the file is supposed to be interpreted using sh? Hint: Run a google search for "what is the bash shebang line" for more information.
+5. **View File Contents with `cat`**:  
+   Display the contents of `file1.txt` and `file2.md`.
+   ```bash
+   cat file1.txt
+   cat file2.md
+   ```
 
-8. Use | and > to write today's date into a file called `today.txt` in your home directory.
+### Part 3: Script Writing and Execution
 
-9. Write a command that _appends_ a list of all files in your home directory to `./today.txt`
+6. **Create a Script File**:  
+   Use `touch` to create a new file called `myscript.sh` and make it executable.
+   ```bash
+   touch myscript.sh
+   chmod +x myscript.sh
+   ```
 
-10. Use `top` or `ps` commands to list of all processes owned by you (not root) running on your machine sorted by CPU usage. To exit from the `top` cmd, enter `Ctrl-c`
+7. **Edit Script with `vi`**:  
+   Write a Bash script into `myscript.sh` using `vi` that performs an HTTP header check.
+   ```bash
+   vi myscript.sh
+   # Add the following lines in vi:
+   # #!/bin/sh
+   # curl --head --silent https://github.com/DS219/resources/blob/main/LICENSE
+   ```
 
+8. **Execute the Script**:  
+   Run the script and understand file permissions.
+   ```bash
+   ./myscript.sh
+   ```
 
-When finished, you can remove `today.txt` practice file (you want to clean up clutter on your system!)
+### Part 4: Advanced File Manipulation
 
-```
-rm today.txt
-```
+9. **Using `less` to View Files**:  
+   View the contents of `myscript.sh` using `less`.
+   ```bash
+   less myscript.sh
+   ```
 
-*This is heavily borrowed from https://missing.csail.mit.edu/2020/course-shell/*
+10. **Searching Within Files Using `grep`**:  
+   Use `grep` to search for 'curl' in `myscript.sh`.
+   ```bash
+   grep 'curl' myscript.sh
+   ```
+
+### Part 5: Safe File Removal
+
+11. **Demonstrate Safe Removal with `rm`**:  
+    Explain the dangers of `rm` and practice safe removal techniques.
+    - Remove `file1.txt` with confirmation:
+      ```bash
+      rm -i file1.txt
+      ```
+    - List and remove Markdown files safely:
+      ```bash
+      ls *.md
+      rm -i *.md
+      ```
+
+### Part 6: Redirecting Output and Managing Processes
+
+12. **Redirect Output and Append**:  
+    Use commands to manage output files.
+    ```bash
+    date > ~/today.txt
+    ls ~ >> ~/today.txt
+    ```
+
+13. **List Processes by CPU Usage**:  
+    List non-root user processes sorted by CPU usage using `ps`.
+    ```bash
+    ps -u $USER --sort=-pcpu
+    ```
+
+### Part 7: Clean Up
+
+14. **Remove Temporary Files**:  
+    Carefully delete the `today.txt` file.
+    ```bash
+    rm ~/today.txt
+    ```
