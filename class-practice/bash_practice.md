@@ -1,119 +1,106 @@
 ## Bash Practice for DS219
 
-This exercise includes basic file and directory management, viewing and manipulating file content, using a text editor, and understanding process management in the Bash shell.
+This exercise focuses on basic file and directory management, using a text editor, script execution, and essential file operations such as moving, copying, and removing files in the Bash shell.
 
 ### Part 1: Working with Directories and Files
 
 1. **Create a New Directory**:  
-   Create a new directory called `ds219`.
+   Create a directory named `ds219` on your Desktop.
    ```bash
    mkdir ~/Desktop/ds219
    ```
 
 2. **Change Directory and Verify Location**:  
-   Navigate to the `ds219` directory and print the current directory path.
+   Navigate to the `ds219` directory and confirm your current directory.
    ```bash
    cd ~/Desktop/ds219/
-   ```
-   ```bash
    pwd
    ```
 
 3. **List Directory Contents**:  
-   Display the contents of the current directory.
+   Show the contents of the current directory.
    ```bash
    ls -l
    ```
 
 ### Part 2: File Creation and Editing with `vi`
 
-4. **Create and Edit Files using `vi`**:  
-   Use `vi` to create and edit `file1.txt` and `file2.md`.
-   - Open `file1.txt` in `vi`, type some text, save, and exit:
-     ```bash
-     vi file1.txt
-     ```
-     (In `vi`, type `i` to enter insert mode, type your text, press `Esc` to exit insert mode, type `:wq` to save and quit.)
-   - Repeat the process for `file2.md`.
+4. **Create and Edit a File using `vi`**:  
+   Open `file1.txt` in `vi`, type some text, and save the file.
+   ```bash
+   vi file1.txt
+   ```
+   - In `vi`, type `i` to enter insert mode, write your text, press `Esc` to exit insert mode, and type `:wq` to save and quit.
 
 5. **View File Contents with `cat`**:  
-   Display the contents of `file1.txt` and `file2.md`.
+   Display the content of `file1.txt`.
    ```bash
    cat file1.txt
-   cat file2.md
    ```
 
 ### Part 3: Script Writing and Execution
 
 6. **Create a Script File**:  
-   Use `touch` to create a new file called `myscript.sh` and make it executable.
+   Create `myscript.sh`, make it executable, and edit it to perform an HTTP header check.
    ```bash
    touch myscript.sh
    chmod +x myscript.sh
-   ```
-
-7. **Edit Script with `vi`**:  
-   Write a Bash script into `myscript.sh` using `vi` that performs an HTTP header check.
-   ```bash
    vi myscript.sh
-   # Add the following lines in vi:
+   # In vi, add:
    # #!/bin/sh
    # curl --head --silent https://github.com/DS219/resources/blob/main/LICENSE
    ```
 
-8. **Execute the Script**:  
-   Run the script and understand file permissions.
+7. **Execute the Script**:  
+   Execute the script and review the file permissions.
    ```bash
    ./myscript.sh
    ```
 
-### Part 4: Advanced File Manipulation
+### Part 4: File Manipulation
 
-9. **Using `less` to View Files**:  
-   View the contents of `myscript.sh` using `less`.
+8. **Rename a File with `mv`**:  
+   Rename `file1.txt` to `newfile1.txt`.
    ```bash
-   less myscript.sh
+   mv file1.txt newfile1.txt
    ```
 
-10. **Searching Within Files Using `grep`**:  
-   Use `grep` to search for 'curl' in `myscript.sh`.
+9. **Copy a File with `cp`**:  
+   Copy `newfile1.txt` to create a duplicate file named `copy_of_file1.txt`.
    ```bash
-   grep 'curl' myscript.sh
+   cp newfile1.txt copy_of_file1.txt
    ```
+
+10. **Using `less` to View Files**:  
+    View the contents of `myscript.sh` using `less`.
+    ```bash
+    less myscript.sh
+    ```
+
+11. **Search Within Files Using `grep`**:  
+    Search for 'curl' in `myscript.sh`.
+    ```bash
+    grep 'curl' myscript.sh
+    ```
 
 ### Part 5: Safe File Removal
 
-11. **Demonstrate Safe Removal with `rm`**:  
-    Explain the dangers of `rm` and practice safe removal techniques.
-    - Remove `file1.txt` with confirmation:
+12. **Demonstrate Safe Removal with `rm`**:  
+    Explain the risks of `rm` and practice safe removal techniques.
+    - Request confirmation before removing `newfile1.txt`:
       ```bash
-      rm -i file1.txt
+      rm -i newfile1.txt
       ```
-    - List and remove Markdown files safely:
+    - List `.txt` files and remove them safely:
       ```bash
-      ls *.md
-      rm -i *.md
+      ls *.txt
+      rm -i *.txt
       ```
 
-### Part 6: Redirecting Output and Managing Processes
+### Part 6: Clean Up
 
-12. **Redirect Output and Append**:  
-    Use commands to manage output files.
+13. **Remove Temporary Files**:  
+    Remove any remaining files to clean up the workspace.
     ```bash
-    date > ~/today.txt
-    ls ~ >> ~/today.txt
-    ```
-
-13. **List Processes by CPU Usage**:  
-    List non-root user processes sorted by CPU usage using `ps`.
-    ```bash
-    ps -u $USER --sort=-pcpu
-    ```
-
-### Part 7: Clean Up
-
-14. **Remove Temporary Files**:  
-    Carefully delete the `today.txt` file.
-    ```bash
-    rm ~/today.txt
+    rm -i ~/Desktop/ds219/*
     ```
