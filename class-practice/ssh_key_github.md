@@ -65,11 +65,3 @@ This exercise will show you how to generate an SSH key pair, add it to GitHub, a
     ```bash
     git config --global url."git@github.com:".insteadOf "https://github.com/"
     ```
-
-### Part 6: Clone a Repository Using SSH
-
-12. **Clone a Repository**:  
-    Clone a repository to test the SSH configuration. 
-    ```bash
-    git clone git@github.com:DS219/spark-seprep.git
-    ```
