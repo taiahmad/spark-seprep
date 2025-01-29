@@ -47,8 +47,8 @@ This exercise focuses on basic file and directory management, using a text edito
    chmod +x myscript.sh
    vi myscript.sh
    # In vi, add:
-   # #!/bin/sh
-   # curl --head --silent https://github.com/DS219/resources/blob/main/LICENSE
+   #!/bin/sh
+   curl https://raw.githubusercontent.com/DS219/spark-seprep/refs/heads/main/LICENSE
    ```
 
 7. **Execute the Script**:  
