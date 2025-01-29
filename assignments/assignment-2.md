@@ -8,9 +8,11 @@ Note: Windows users, please ensure you do this assignment using WSL.
    
    Feel free to skip this step if you already generated your keys in class.
    
-   Once your `Public and Private SSH keys` are created, they should live on your system at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa respectively.
+   Once your `Public and Private SSH keys` are created, they should live on your system at `~/.ssh/id_rsa.pub` and `~/.ssh/id_rsa` or `~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519` respectively.
 
-1. Your username is your BU email address without the `@bu.edu`. Copy your public SSH key to the virtual machine at `34.138.147.23`
+   Note: **Never expose your private key!** Your private keys are the ones **WITHOUT** the `.pub` extension.
+
+2. Your username is your BU email address without the `@bu.edu`. Copy your public SSH key to the virtual machine at `34.138.147.23`
    **Note: Replace `YOUR_NAME` with your actual BU username**
 
 ```bash
