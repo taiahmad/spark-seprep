@@ -9,14 +9,15 @@ This exercise will show you how to generate an SSH key pair, add it to GitHub, a
 
 2. **Generate an SSH Key Pair**:  
    Use the `ssh-keygen` command to create a new SSH key pair. You will be prompted to enter a file path to save the key, and an optional passphrase for added security.
+   Just hit enter to use the default path and leave the password blank (setting a password is not necessary).
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
    ```
    - Replace `"your_email@example.com"` with your actual email address.
    - Press `Enter` to accept the default file location.
-   - Optionally, enter a passphrase when prompted for enhanced security.
+   - Press `Enter` to leave the password blank.
 
-3. **View the Public Key**:  
+4. **View the Public Key**:  
    Display the contents of your public key using `cat`. This is the key that GitHub will use to authenticate your SSH connection.
    ```bash
    cat ~/.ssh/id_ed25519.pub
