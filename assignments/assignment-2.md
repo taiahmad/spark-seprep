@@ -1,8 +1,10 @@
 ## SSH Practice
 
 Note: `directory` and `folder` are interchangeable in the following tasks.
+Note: Windows users, please ensure you do this assignment using WSL.
 
-0. Your `Public and Private SSH keys` should live on your system at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa respectively.
+0. Follow the steps here to create your SSH keys and upload it to github - https://github.com/DS219/spark-seprep/blob/main/class-practice/ssh_key_github.md.
+   Once your `Public and Private SSH keys` keys are created, they should live on your system at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa respectively.
 
 1. Your username is your BU email address without the `@bu.edu`. Copy your public SSH key to the virtual machine at `34.138.147.23`
    **Note: Replace `YOUR_NAME` with your actual BU username**
