@@ -12,6 +12,7 @@ This assignment aims to enhance your version control skills by guiding you throu
 
 **2. Create your File:**
 
+   - Ensure that you are on your `main` branch `git checkout main`.
    - Create a new .txt file using any editor you like and call it `introduction.txt`.
    - Inside the file, add a few lines introducing yourself and what your favorite class has been so far at BU.
    - Save the file.
@@ -41,7 +42,7 @@ Follow these steps to add, commit, and push your new file to your github repo.
     ```
   - Push the new chnges to your repository on github:
     ```
-    git push origin master
+    git push origin main
     ```
 
 **Submission:**
