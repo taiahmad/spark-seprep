@@ -5,8 +5,8 @@ My favorite programming language is Python because I feel it is the easiest to u
 ## Example Code
 
 ```python
-
-print("Hello World!")
+print("Hello World!"
+```
 
 ### Code Explanation
 
