@@ -13,7 +13,7 @@ fn main() {
     }
     println!("🚀 Liftoff!");
 }
-
+```
 ### Code Explanation
 
 	•	The for i in (1..=5).rev() loop counts down from 5 to 1.
