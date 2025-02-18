@@ -79,6 +79,6 @@ git branch
    - Tested the solution with a sample input [2, 7, 11, 15] and target = 9, returning correct indices [0, 1].
    ```
 
-5. **Create the a PR against the DS219/spark-seprep repository like you did in assignment4**
+5. **Create a PR against the DS219/spark-seprep repository like you did in assignment4**
 
 **Note: For your assignment, do not use the example already used here to help describe the assignment. Pick any other leetcode question from the easy category.**
