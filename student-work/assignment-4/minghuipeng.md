@@ -1,6 +1,6 @@
-# Freda Peng
+# Minghui Peng
 
-Hi! I'm Freda, and my favorite programming language is Rust. I love Rust because of its memory safety, performance, and strong type system. It empowers developers to write efficient and reliable code without worrying about common issues like null pointer dereferencing or data races.
+Hi! I'm Minghui, and my favorite programming language is Rust. I love Rust because of its memory safety, performance, and strong type system. It empowers developers to write efficient and reliable code without worrying about common issues like null pointer dereferencing or data races.
 
 ## Code Example
 
