@@ -83,9 +83,9 @@ git branch
 
 **Note: For your assignment, do not use the example already used here to help describe the assignment. Pick any other leetcode question from the easy category.**
 
-**Grading Rubric**
-- Descriptive and clear commit message
-- Only 1 commit in your PR
-- No extra junk files in PR
-- Changes done on a different branch and not on main
-- No modifications to any other files in the repo
+**Grading Rubric:**
+- Descriptive and clear commit message (2 pts)
+- Only 1 commit in your PR (2 pts)
+- No extra junk files in PR (2 pts)
+- Changes should be done on the assignment branch and not on main (2 pts)
+- No modifications to any other files in the repo (2 pts)
