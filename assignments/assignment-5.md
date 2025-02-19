@@ -83,6 +83,13 @@ git branch
 
 **Note: For your assignment, do not use the example already used here to help describe the assignment. Pick any other leetcode question from the easy category.**
 
+**Note: If you mess up after making a commit and want to fix that, DO NOT create a new commit. Amend your existing commit instead and then do a force push**
+```
+git add [changes]
+git commit --amend
+git push -f origin [your-branch-name]
+```
+
 **Grading Rubric:**
 - Descriptive and clear commit message (2 pts)
 - Only 1 commit in your PR (2 pts)
