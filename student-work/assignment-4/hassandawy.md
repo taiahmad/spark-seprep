@@ -10,6 +10,7 @@ def fib(n):
         return 1
     else:
         return fib(n-1) + fib(n-2)
-        ```
+
+```
 ### Code Explanation
 This is a code about the fibonacci series and to run it you should print(fib(n)) with n being the number of how many fibonacci series digits you want.
