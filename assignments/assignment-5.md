@@ -82,3 +82,17 @@ git branch
 5. **Create a PR against the DS219/spark-seprep repository like you did in assignment4**
 
 **Note: For your assignment, do not use the example already used here to help describe the assignment. Pick any other leetcode question from the easy category.**
+
+**Note: If you mess up after making a commit and want to fix that, DO NOT create a new commit. Amend your existing commit instead and then do a force push**
+```
+git add [changes]
+git commit --amend
+git push -f origin [your-branch-name]
+```
+
+**Grading Rubric:**
+- Descriptive and clear commit message (2 pts)
+- Only 1 commit in your PR (2 pts)
+- No extra junk files in PR (2 pts)
+- Changes should be done on the assignment branch and not on main (2 pts)
+- No modifications to any other files in the repo (2 pts)
