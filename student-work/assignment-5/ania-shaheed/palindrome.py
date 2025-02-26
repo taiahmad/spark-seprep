@@ -1,0 +1,12 @@
+def isPalindrome(x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+
+        return str(x) == str(x)[::-1]
+
+#Test case
+x = -121
+result = isPalindrom(x)
+print("Is it a palindrome?", result)
